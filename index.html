@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise Estruturada de Performance Financeira</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for fonts and colors */
+        :root {
+            --azul-petroleo: #083B4C;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            color: #333;
+        }
+        .font-raleway {
+            font-family: 'Raleway', sans-serif;
+        }
+        .font-lato {
+            font-family: 'Lato', sans-serif;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-azul-petroleo {
+            background-color: var(--azul-petroleo);
+        }
+        .text-azul-petroleo {
+            color: var(--azul-petroleo);
+        }
+        .page {
+            min-height: 100vh; /* Each page takes full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            box-sizing: border-box;
+            scroll-snap-align: start; /* For smooth scrolling between pages */
+        }
+        /* Style for vertical timeline items (used for "Como funciona") */
+        .timeline-item-vertical {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .timeline-item-vertical::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 10px;
+            height: 10px;
+            background-color: var(--azul-petroleo);
+            border-radius: 50%;
+        }
+        .timeline-item-vertical::after {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 1rem;
+            bottom: -1.5rem;
+            width: 2px;
+            background-color: #ccc;
+        }
+        .timeline-item-vertical:last-child::after {
+            display: none; /* Hide line for the last item */
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <section id="page1" class="page bg-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1/3 bg-azul-petroleo rounded-br-full opacity-10 md:w-1/2 md:h-full"></div>
+        <div class="absolute bottom-0 right-0 w-full h-1/3 bg-azul-petroleo rounded-tl-full opacity-10 md:w-1/2 md:h-full"></div>
+
+        <div class="relative z-10 text-center p-8 bg-white bg-opacity-90 rounded-xl shadow-lg max-w-4xl mx-auto">
+            <p class="font-lato text-lg md:text-xl text-gray-700 mb-2">João Pedro Macêdo</p>
+            <p class="font-lato text-sm md:text-base text-gray-500 mb-6">Especialista em Finanças Estratégicas · Fundador da Norien</p>
+            <h1 class="font-raleway text-3xl md:text-5xl font-bold text-azul-petroleo mb-6 leading-tight">Análise Estruturada de Performance Financeira</h1>
+            <p class="font-playfair text-base md:text-lg italic text-gray-800 mb-10">Inteligência financeira para tomar decisões e crescer.</p>
+            <div class="absolute bottom-4 left-0 right-0 text-center text-gray-500 text-xs md:text-sm">
+                <p>WhatsApp (71) 99318-4061 | Fundador da Norien</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="page2" class="page bg-gray-50">
+        <div class="max-w-4xl mx-auto p-8 bg-white rounded-xl shadow-lg">
+            <div class="mb-10">
+                <h2 class="font-raleway text-2xl md:text-3xl font-bold text-azul-petroleo mb-4">Quem é João Pedro Macêdo</h2>
+                <p class="font-lato text-base md:text-lg text-gray-700 mb-4">
+                    Especialista em Finanças Estratégicas com mais de R$1 bilhão em dados analisados.
+                </p>
+                <p class="font-lato text-base md:text-lg text-gray-700 mb-4">
+                    Cresci vendo empresas batalharem para crescer sem clareza sobre os próprios números — e foi isso que me motivou a transformar complexidade financeira em decisões lucrativas.
+                </p>
+                <p class="font-lato text-base md:text-lg text-gray-700">
+                    Ao longo da minha trajetória, atuei do chão de fábrica à sala de conselho, ajudando negócios a enxergarem o que realmente importa para prosperar.
+                </p>
+            </div>
+
+            <div class="mb-10">
+                <h2 class="font-raleway text-2xl md:text-3xl font-bold text-azul-petroleo mb-6">Por onde já passei</h2>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="flex-shrink-0 p-3 bg-gray-50 rounded-lg shadow-sm text-center">
+                        <p class="font-lato text-lg font-semibold text-gray-800">JSG / Brasil Kirin (Heineken)</p>
+                    </div>
+                    <div class="flex-shrink-0 p-3 bg-gray-50 rounded-lg shadow-sm text-center">
+                        <p class="font-lato text-lg font-semibold text-gray-800">Santander</p>
+                    </div>
+                    <div class="flex-shrink-0 p-3 bg-gray-50 rounded-lg shadow-sm text-center">
+                        <p class="font-lato text-lg font-semibold text-gray-800">Soul Dila</p>
+                    </div>
+                    <div class="flex-shrink-0 p-3 bg-gray-50 rounded-lg shadow-sm text-center">
+                        <p class="font-lato text-lg font-semibold text-gray-800">OCA – Health Food</p>
+                    </div>
+                    <div class="flex-shrink-0 p-3 bg-gray-50 rounded-lg shadow-sm text-center">
+                        <p class="font-lato text-lg font-semibold text-gray-800">Souto & Souto Contabilidade</p>
+                    </div>
+                    <div class="flex-shrink-0 p-3 bg-gray-50 rounded-lg shadow-sm text-center">
+                        <p class="font-lato text-lg font-semibold text-gray-800">Caffeine Army (SuperCoffee)</p>
+                    </div>
+                    <div class="flex-shrink-0 p-3 bg-gray-50 rounded-lg shadow-sm text-center">
+                        <p class="font-lato text-lg font-semibold text-gray-800">Santa Helena Construtora</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="font-raleway text-2xl md:text-3xl font-bold text-azul-petroleo mb-4">A Norien nasce dessa jornada</h2>
+                <p class="font-lato text-base md:text-lg text-gray-700 mb-4">
+                    Minha vivência — resolvendo, na prática, os dilemas financeiros reais dos negócios.
+                </p>
+                <p class="font-lato text-base md:text-lg text-gray-700">
+                    É um núcleo de inteligência financeira: une tecnologia, análise e aconselhamento estratégico para entregar clareza para decisão com foco em lucro.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="page3" class="page bg-white">
+        <div class="max-w-4xl mx-auto p-8 bg-white rounded-xl shadow-lg">
+            <div class="mb-10">
+                <h2 class="font-raleway text-2xl md:text-3xl font-bold text-azul-petroleo mb-6 text-center">O que entregamos na prática</h2>
+                <p class="font-lato text-base md:text-lg text-gray-700 mb-8 text-center">
+                    Nossa entrega inicial não é um relatório. É uma análise profunda que revela onde sua empresa perde dinheiro, onde pode ganhar mais — e como se organizar para crescer com margem e segurança.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-start p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-azul-petroleo mr-4">🧭</span>
+                        <p class="font-lato text-base md:text-lg text-gray-800">Mapeamento da saúde financeira real</p>
+                    </div>
+                    <div class="flex items-start p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-azul-petroleo mr-4">📉</span>
+                        <p class="font-lato text-base md:text-lg text-gray-800">Diagnóstico de perdas invisíveis e gargalos de margem</p>
+                    </div>
+                    <div class="flex items-start p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-azul-petroleo mr-4">🛠️</span>
+                        <p class="font-lato text-base md:text-lg text-gray-800">Recomendações práticas para aumentar lucro</p>
+                    </div>
+                    <div class="flex items-start p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-azul-petroleo mr-4">📊</span>
+                        <p class="font-lato text-base md:text-lg text-gray-800">Relatório visual com dados acionáveis</p>
+                    </div>
+                    <div class="flex items-start p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-azul-petroleo mr-4">🧠</span>
+                        <p class="font-lato text-base md:text-lg text-gray-800">Apoio estratégico para decisões com mais precisão</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="font-raleway text-2xl md:text-3xl font-bold text-azul-petroleo mb-6 text-center">Como funciona</h2>
+                <div class="relative pl-8">
+                    <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-300"></div>
+                    <div class="timeline-item-vertical">
+                        <span class="text-2xl text-azul-petroleo mr-2 absolute left-[-2.5rem] top-0">💬</span>
+                        <p class="font-lato text-lg font-semibold text-gray-800">Conversa inicial</p>
+                        <p class="font-lato text-sm text-gray-600">para entender o momento da empresa</p>
+                    </div>
+                    <div class="timeline-item-vertical">
+                        <span class="text-2xl text-azul-petroleo mr-2 absolute left-[-2.5rem] top-0">📥</span>
+                        <p class="font-lato text-lg font-semibold text-gray-800">Coleta de informações</p>
+                        <p class="font-lato text-sm text-gray-600">(planilhas, relatórios ou estimativas)</p>
+                    </div>
+                    <div class="timeline-item-vertical">
+                        <span class="text-2xl text-azul-petroleo mr-2 absolute left-[-2.5rem] top-0">🔍</span>
+                        <p class="font-lato text-lg font-semibold text-gray-800">Diagnóstico estratégico</p>
+                        <p class="font-lato text-sm text-gray-600">método próprio + automação</p>
+                    </div>
+                    <div class="timeline-item-vertical">
+                        <span class="text-2xl text-azul-petroleo mr-2 absolute left-[-2.5rem] top-0">🚀</span>
+                        <p class="font-lato text-lg font-semibold text-gray-800">Entrega do diagnóstico</p>
+                        <p class="font-lato text-sm text-gray-600">com insights</p>
+                    </div>
+                    <div class="timeline-item-vertical">
+                        <span class="text-2xl text-azul-petroleo mr-2 absolute left-[-2.5rem] top-0">🤝</span>
+                        <p class="font-lato text-lg font-semibold text-gray-800">Reunião de apresentação</p>
+                        <p class="font-lato text-sm text-gray-600">e próximos passos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="page4" class="page bg-gray-50">
+        <div class="max-w-4xl mx-auto p-8 bg-white rounded-xl shadow-lg text-center">
+            <h2 class="font-raleway text-3xl md:text-4xl font-bold text-azul-petroleo mb-4 leading-tight">
+                Lucro é consequência de boas decisões.
+            </h2>
+            <h3 class="font-raleway text-xl md:text-2xl font-bold text-azul-petroleo mb-8">
+                Boas decisões exigem clareza.
+            </h3>
+
+            <div class="my-10">
+                <p class="font-lato text-base md:text-lg text-gray-700 mb-4">
+                    <span class="font-bold text-azul-petroleo">Solicite um diagnóstico de performance financeira.</span>
+                </p>
+                <p class="font-lato text-base md:text-lg text-gray-700 mb-4">
+                    Uma análise profunda que ilumina desde finanças até decisões estratégicas, operacionais e de posicionamento.
+                </p>
+                <p class="font-lato text-base md:text-lg text-gray-700 mb-8 italic">
+                    Feita para quem quer parar de apagar incêndios e começar a liderar com inteligência.
+                </p>
+            </div>
+
+            <div class="border-t border-gray-200 pt-8">
+                <p class="font-lato text-xl md:text-2xl font-bold text-azul-petroleo mb-2">João Pedro Macêdo</p>
+                <p class="font-lato text-base md:text-lg text-gray-700 mb-1">Especialista em Finanças Estratégicas</p>
+                <p class="font-lato text-base md:text-lg text-gray-700 mb-4">Fundador da Norien</p>
+
+                <div class="flex flex-col items-center justify-center space-y-3 mb-6">
+                    <p class="font-lato text-lg md:text-xl text-gray-800 flex items-center">
+                        <span class="text-azul-petroleo mr-2">📱</span> WhatsApp: (71) 99318-4061
+                    </p>
+                    <p class="font-lato text-lg md:text-xl text-gray-800 flex items-center">
+                        <span class="text-azul-petroleo mr-2">✉️</span> Email: contato@macedo.finance
+                    </p>
+                    <p class="font-lato text-lg md:text-xl text-gray-800 flex items-center">
+                        <span class="text-azul-petroleo mr-2">🔗</span> LinkedIn: /joaopedromacedo
+                    </p>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center space-y-6">
+                    <div class="w-32 h-32 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 text-sm">
+                        [QR Code para WhatsApp]
+                    </div>
+                    <div class="w-48 h-20 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 text-sm">
+                        [Logo da Norien]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
